@@ -1,0 +1,27 @@
+About
+
+The data has been stored in csv format. Each row consists of the following columns.
+
+Absorbance: You will have 170 of these labelled as absorbance0, absorbance1 and so on. This is an intensity spectrum of the target blood response to pointed light. The overall goal of the project is to be able to determine all the components present in a compound from its spectrum. The data with labels “trim” is the same as the main data but with the edges of the spectrum trimmed. Bloods-ai believe these edges are very nosy so they don't contain any reliable information. Also, because of the large number features, your task will also be to experiment and determine if there is a specific range of values that is sufficient to describe the model. This will make the model simpler and also prevent overfitting.
+
+Temperature: Temperature at the time of the measurement.
+
+Humidity: Humidity at the time of the measurement.
+
+Id: Unique identifier assigned to each measurement.
+
+Hdl_cholesterol_human: The level of cholesterol high. Can be low, ok or high.
+
+Cholesterol_ldl_human: The level of cholesterol low. Can be low, ok or high.
+
+Hemoglobin(hgb)_human: The level of hemoglobin: Can be low, ok or high.
+
+Each blood sample is scanned 60 times, we actually have 60 measurements for each. We have shuffled the measurements, so you won’t know which measurements are from the same sample. Hence, try to fight overfitting as much as possible because this could lead to overfitting.
+
+Files available for download:
+
+    Train.csv: contains the target(Hdl_cholesterol_human, Cholesterol_ldl_human, Hemoglobin(hgb)_human) . This is the dataset that you will use to train your model.
+    Train_trimmed.csv: Same as the Train.csv but the absorbance columns/values have been trimmed.
+    Test.csv: Resembles Train.csv but without the target-related columns. This is the dataset to which you will apply your model.
+    Test_trimmed.csv: Same as the Test.csv but the absorbance columns/values have been trimmed.
+    SampleSubmission.csv: shows the submission format for this competition
